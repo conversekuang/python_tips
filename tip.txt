@@ -1,0 +1,44 @@
+****       首先说一下 Iterable 与 iterator的区别     ****
+
+    Iterator 迭代器
+    Iterable 可迭代对象
+
+    Iterable 凡是可以for循环的 都属于 iterable 可迭代对象
+    Iterator 凡是可以next()的 都是iterator 迭代器
+
+    可迭代对象(iterble)并  不一定是 迭代器(iterator)     例如: dict, set, list
+    迭代器(iterator)一定是可迭代对象(iterable)
+
+
+    把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__() 
+
+
+
+ ****   python iter()与 __iter__()的区别  ****
+
+
+    Iter（ ）与__iter__ 则用于产生 iterator（迭代器）
+
+
+    __iter__ 迭代器协议
+　　　　凡是实现__iter__协议的对象，皆是迭代器对象。（next（）也得实现，不然没法产生数据)
+　　
+    Iter()迭代器工厂函数
+　　　　凡是有定义有__iter__()函数，或者支持序列访问协议，也就是定义有__getitem__()函数的对象 皆可以通过 
+    iter（）工厂函数 产生迭代器（iterable）对象
+
+    
+    iter()可以将iterable对象进行生成固定的迭代器
+
+
+****     迭代器 与 生成器      ****
+
+    生成器：带yield关键字的函数
+
+    迭代器：一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
+
+    __iter__() 方法返回一个特殊的迭代器对象， 这个迭代器对象实现了 __next__() 方法并通过 StopIteration 异常标识迭代的完成。
+
+    __next__() 方法（Python 2 里是 next()）会返回下一个迭代器对象。
+
+    调用一个生成器函数，返回的是一个迭代器对象
