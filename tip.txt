@@ -59,5 +59,11 @@
 
 
 
+****       包装器       ****
+    详细见Decorator函数
+    首先，包装器用于在原先有的函数基础上进行添加新的功能。
 
+    基本内容：  包装器
 
+    进阶内容：  含参包装器 和 类包装器
+    https://www.cnblogs.com/cicaday/p/python-decorator.html
